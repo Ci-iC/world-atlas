@@ -45,12 +45,13 @@ h1 { font: 700 clamp(37px, 5.4vw, 68px)/1.14 var(--serif); letter-spacing: .03em
 .continent-svg .shoreline { fill: none; stroke: #98aca0; stroke-width: 20; stroke-opacity: .22; stroke-linejoin: round; }
 .continent-svg .land-texture { fill: url(#land-light); pointer-events: none; }
 .continent-svg .map-grid { fill: url(#map-grid); pointer-events: none; }
-.continent-svg .region-shape { fill: var(--region-color); stroke: #302b21; stroke-width: 2.5; stroke-opacity: .82; stroke-linejoin: round; }
-.continent-svg .region-shape:hover, .continent-svg .region-shape:focus { fill: #f2dc9e; stroke: #322510; stroke-width: 6; opacity: 1; }
+.continent-svg .region-shape { stroke: #302b21; stroke-width: 2.5; stroke-opacity: .82; stroke-linejoin: round; }
+.continent-svg .region-shape > path { fill: var(--region-color); }
 .continent-svg .region-shape:focus-visible { outline: none; }
 .continent-svg .region-shape.is-muted { opacity: .18; }
-.continent-svg .region-shape:hover, .continent-svg .region-shape:focus { opacity: 1; }
-.continent-svg .region-shape.is-highlight { fill: #f2dc9e; stroke: #302713; stroke-width: 8; }
+.continent-svg .region-shape:is(:hover, :focus) { stroke: #322510; stroke-width: 6; opacity: 1; }
+.continent-svg .region-shape.is-highlight { stroke: #302713; stroke-width: 8; }
+.continent-svg .region-shape:is(:hover, :focus, .is-highlight) > path { fill: #f2dc9e; }
 .continent-svg .country-line { fill: none; stroke: #302b21; stroke-width: 5; stroke-linejoin: round; opacity: .65; pointer-events: none; }
 .continent-svg .region-label { text-anchor: middle; dominant-baseline: central; font: 700 50px var(--sans); letter-spacing: 2px; fill: #242923; stroke: #f1dfac; stroke-opacity: .73; stroke-width: 6; stroke-linejoin: round; paint-order: stroke; pointer-events: none; }
 .continent-svg .region-label.is-muted { opacity: .32; }

@@ -43,29 +43,31 @@ export function drawMap(world, geometry, { selected, interactive = false } = {})
   for (const path of geometry.countries) countryLines.append(svgElement('path', { d: path, class: 'country-line' }));
   const shapes = svgElement('g');
   const labels = svgElement('g', { 'aria-hidden': 'true' });
-  const labeled = new Set(geometry.regions.filter(shape => shape.label).map(shape => shape.id));
-  const tabbable = new Set();
+  const regionNodes = new Map();
 
   for (const shape of geometry.regions) {
     const region = regions.get(shape.id);
     const group = groups.get(region.group);
-    const node = svgElement(interactive ? 'a' : 'g', { class: 'region-shape', 'data-region': shape.id });
-    node.style.setProperty('--region-color', `color-mix(in srgb, ${region.color ?? group.color} 75%, ${shape.color})`);
-    if (selected === shape.id) node.classList.add('is-highlight');
-    if (selected && selected !== shape.id) node.classList.add('is-muted');
-    if (interactive) {
-      const canTab = !tabbable.has(shape.id) && (shape.label || !labeled.has(shape.id));
-      node.setAttribute('href', regionHref(shape.id));
-      node.setAttribute('tabindex', canTab ? '0' : '-1');
-      node.setAttribute('aria-label', region.mapName);
-      if (canTab) tabbable.add(shape.id);
-      else node.setAttribute('aria-hidden', 'true');
-      const title = svgElement('title');
-      title.textContent = region.mapName;
-      node.append(title);
+    let node = regionNodes.get(shape.id);
+    if (!node) {
+      node = svgElement(interactive ? 'a' : 'g', { class: 'region-shape', 'data-region': shape.id });
+      if (selected === shape.id) node.classList.add('is-highlight');
+      if (selected && selected !== shape.id) node.classList.add('is-muted');
+      if (interactive) {
+        node.setAttribute('href', regionHref(shape.id));
+        node.setAttribute('tabindex', '0');
+        node.setAttribute('aria-label', region.mapName);
+        const title = svgElement('title');
+        title.textContent = region.mapName;
+        node.append(title);
+      }
+      shapes.append(node);
+      regionNodes.set(shape.id, node);
     }
-    node.append(svgElement('path', { d: shape.path }));
-    shapes.append(node);
+
+    const path = svgElement('path', { d: shape.path });
+    path.style.setProperty('--region-color', `color-mix(in srgb, ${region.color ?? group.color} 75%, ${shape.color})`);
+    node.append(path);
 
     if (shape.label && (interactive || selected === shape.id)) {
       const label = svgElement('text', { x: shape.label[0], y: shape.label[1], class: 'region-label', 'data-region': shape.id });
