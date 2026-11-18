@@ -18,6 +18,7 @@
 - global-rules.md：全世界观通用规则。
 - countries/：国家级设定。
 - regions/：地区级设定。
+- assets/：图片素材及其对应的使用说明。
 - CHANGELOG.md：重大设定变更记录。
 
 ## 设计层级
