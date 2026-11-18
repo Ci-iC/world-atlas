@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="在三国大洲地图上探索五部联盟、瓦尔瑟恩帝国、阿斯特兰帝国及未归属区域。">
+  <title>三国大洲 · 世界图鉴</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/compass.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./atlas.js"></script>
+</head>
+<body>
+  <a class="skip" href="#directory">跳至地区索引</a>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="./"><img src="./assets/compass.svg" alt="" width="26" height="26">世界图鉴</a>
+      <nav aria-label="主导航"><a href="#atlas" aria-current="page">大洲地图</a><a href="#directory">地区索引</a><a href="#world-notes">大洲概况</a></nav>
+    </div>
+  </header>
+  <main class="shell">
+    <section id="atlas" aria-labelledby="atlas-title">
+      <div class="atlas-heading">
+        <div>
+          <h1 id="atlas-title">三国大洲</h1>
+          <p>从北部高原到东部群岛，沿地图查阅各地风土、家族与神器。</p>
+        </div>
+        <span class="edition"><i></i>区划草案</span>
+      </div>
+      <div class="atlas-layout">
+        <figure class="map-panel">
+          <div class="map-viewport" id="map-viewport" aria-label="大洲交互地图" aria-describedby="map-note">
+            <div id="continent" class="map-canvas"></div>
+            <img class="map-compass" src="./assets/compass.svg" alt="" width="54" height="54">
+            <div class="map-controls" aria-label="地图缩放">
+              <button id="zoom-in" type="button" aria-label="放大地图" title="放大地图" disabled>+</button>
+              <button id="zoom-out" type="button" aria-label="缩小地图" title="缩小地图" disabled>−</button>
+              <button id="zoom-reset" type="button" aria-label="重置地图视图" title="重置地图视图" disabled><svg aria-hidden="true" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/><circle cx="12" cy="12" r="2.5"/></svg></button>
+            </div>
+          </div>
+          <figcaption><span id="map-note">区划与位置为参考草案，精确疆界和地形仍待确认。</span><span class="map-instruction">点击地区查看设定</span></figcaption>
+        </figure>
+        <section class="directory" id="directory" aria-labelledby="directory-title">
+          <div class="directory-head">
+            <div class="directory-title"><h2 id="directory-title">地区索引</h2><span id="result-count" role="status"></span></div>
+            <label class="search"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 4.5 4.5"/></svg><input id="search" type="search" aria-label="搜索地区" placeholder="搜地名、家族或神器"></label>
+            <div class="filters" id="filters" role="group" aria-label="按归属筛选"></div>
+          </div>
+          <div class="directory-scroll" id="region-list"><p class="message" role="status">正在读取地区资料…</p></div>
+        </section>
+      </div>
+      <noscript><p class="message">请启用 JavaScript 以使用交互地图和地区索引。</p></noscript>
+    </section>
+    <section class="world-notes" id="world-notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">大洲概况</h2>
+      <p class="overview">大陆北宽南窄，北部高山与高原相连，东岸岛链通往外洋。两个帝国隔南部大海湾相望，也通过中央山脉附近的山口与河谷往来。</p>
+      <div class="notes-grid" id="world-groups"></div>
+    </section>
+  </main>
+  <footer class="page-footer shell"><span>三国大洲 · 世界图鉴</span><span id="source">大洲地理设定与地图制作说明 V1.0</span></footer>
+</body>
+</html>

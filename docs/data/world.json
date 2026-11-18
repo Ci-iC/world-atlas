@@ -1,0 +1,118 @@
+{
+  "title": "三国大洲",
+  "source": "大洲地理设定与地图制作说明 V1.0",
+  "mapNote": "区划与位置为参考草案，精确疆界和地形仍待确认。",
+  "groups": [
+    {"id": "alliance", "name": "五部联盟", "color": "#9ebbc6", "description": "五个部落分布在北部高寒高原和山地，环绕由五部共同守护的中央圣地。向南过渡至山麓、丘陵与湿地。"},
+    {"id": "valthern", "name": "瓦尔瑟恩帝国", "color": "#c78d73", "description": "帝国从西北高山密林延伸到西南干旱带与南部大海湾。旧都所在的内陆河谷和革命复兴后建立的沿海新都构成两处历史重心。"},
+    {"id": "aestran", "name": "阿斯特兰帝国", "color": "#a4be91", "description": "东部帝国跨越白珊瑚台地、近海岛链、河谷都市圈与南方农业平原。东北腹地保留大量名义属国但实际控制薄弱的地带。"},
+    {"id": "unclaimed", "name": "未归属区域", "color": "#c6b88f", "description": "三国之外仍有冻土、荒原、深山和开放海洋。部分地带可能存在游牧群体、独立村落、探索据点和猎人营地。"}
+  ],
+  "regions": [
+    {
+      "id": "rocklands", "group": "alliance", "name": "岩原地区", "mapName": "岩原地区", "position": "联盟西北部 · 示意", "artifact": "灵念双骨锤", "tags": "岩石高原 · 风蚀山脊",
+      "summary": "裸露的山脊横贯寒冷旷野，岩石高原由高原溪流和季节性河谷切开。",
+      "sections": [{"title": "地貌与水文", "paragraphs": ["地区以岩石高原、裸露山脊和风蚀地貌为主。暂定水系以高原溪流和季节性河谷为主。"]}]
+    },
+    {
+      "id": "frostwood", "group": "alliance", "name": "冰雪森林地区", "mapName": "冰雪森林地区", "position": "联盟北部 · 示意", "artifact": "霜木钉棍", "tags": "寒林 · 积雪山谷",
+      "summary": "针叶林与积雪山谷构成联盟北部的寒林地带，森林以北延伸为极北荒原。",
+      "sections": [{"title": "地貌与水文", "paragraphs": ["寒冷森林、针叶林和冰雪山谷是本地区的主要环境。暂定水源包括冰雪融水。"]}]
+    },
+    {
+      "id": "caverns", "group": "alliance", "name": "洞窟地区", "mapName": "洞窟地区", "position": "联盟东部 · 示意", "artifact": "灵焰蝙蝠铃铛", "tags": "地下湖 · 山体裂隙",
+      "summary": "复杂岩层之内分布大型洞窟、地下湖泊和地下河流。",
+      "sections": [{"title": "地下地貌", "paragraphs": ["大片山体裂隙连接洞窟、水下空间和不同岩层。暂定地理方案将这里与北方高山地质带相连。"]}]
+    },
+    {
+      "id": "volcanic-tribe", "group": "alliance", "name": "火山地区", "mapName": "火山地区", "position": "联盟西南部 · 示意", "artifact": "幽焰碎星狼牙棒", "tags": "活火山 · 地热荒原",
+      "summary": "活火山与地热区坐落在寒冷山地之间，火山荒原延伸至联盟西南部。",
+      "sections": [{"title": "地质联系", "paragraphs": ["暂定方案中，这片火山地带与瓦尔瑟恩火山矿冶地区处于同一大尺度地质活动带的不同地段。两地各有自己的社会传统。"]}]
+    },
+    {
+      "id": "marshlands", "group": "alliance", "name": "沼泽地区", "mapName": "沼泽地区", "position": "联盟东南部 · 示意", "artifact": "百合根缚灵索", "tags": "冷湿地 · 雾沼",
+      "summary": "浅湖、雾沼与巨大的树根构成寒冷湿地，也是联盟一个独立部落的家园。",
+      "sections": [{"title": "地貌与生态", "paragraphs": ["浅水、泥沼和苔藓遍布湿地，古老树木生出庞大的根系。暂定水系中，周边支流在这里汇集。"]}, {"title": "聚落与技艺 · 待深化", "paragraphs": ["聚落可采用高脚屋、架空栈道和树上建筑。草药、植物培育、天然纤维和编织是可继续发展的地方特色。部落专属力量体系另行设计。"]}]
+    },
+    {
+      "id": "common-sanctuary", "group": "alliance", "name": "五部共同圣地", "mapName": "五部共同圣地", "affiliation": "五部共同守护 · 中立", "color": "#ddd0a8", "position": "五部中央 · 中立圣地", "tags": "万物之灵 · 共同守护",
+      "summary": "圣地位于五个部落之间，由五部共同守护，保持中立。",
+      "sections": [{"title": "万物之灵", "paragraphs": ["圣地的力量源于古老、宏大的自然精神力量，即万物之灵。它的内涵超出人类祖先崇拜。"]}, {"title": "领袖继任", "paragraphs": ["领袖继任主要涉及梦境、精神感应与自然异象，考验并无固定流程。具体的圣地地貌和仪式地点仍待设计。"]}]
+    },
+    {
+      "id": "mountain-woods", "group": "valthern", "name": "山林地区", "mapName": "山林地区", "position": "帝国西北部 · 示意", "artifact": "沉枕穿云弩", "tags": "高山 · 密林",
+      "summary": "高山、密林与云海占据帝国西北部，山谷向北连接大陆高山体系。",
+      "sections": [{"title": "山地与河源", "paragraphs": ["这里的高山与北方山地相连。按照暂定水系方案，帝国主要河流可发源于此，经过旧都河谷，最终由新都一带入海。"]}]
+    },
+    {
+      "id": "volcanic-foundries", "group": "valthern", "name": "火山矿冶地区", "mapName": "火山矿冶地区", "position": "帝国东北部 · 示意", "artifact": "熔炉重锁", "tags": "火山群 · 矿冶城市",
+      "summary": "火山群、矿脉和熔岩地貌环绕着帝国东北部的矿冶城市。",
+      "sections": [{"title": "矿脉与地质", "paragraphs": ["矿冶城市分布于火山与矿脉地带。暂定方案中，地区和五部联盟南部火山地带存在地质联系，各自形成了不同的社会传统。"]}]
+    },
+    {
+      "id": "old-capital", "group": "valthern", "name": "旧都地区", "mapName": "旧都地区", "position": "帝国中部偏西 · 示意", "artifact": "裂纹拳套", "tags": "内陆河谷 · 古城遗迹",
+      "summary": "古城与遗迹沿内陆河谷分布，记录了旧王都沦陷与帝国革命复兴的历史。",
+      "sections": [{"title": "旧都历史", "paragraphs": ["瓦尔瑟恩曾遭外敌入侵，旧王都一度沦陷。革命复兴后，入侵势力被击败，政治中心迁往沿海新王都。旧都仍可保有历史、军事与文化价值。"]}, {"title": "河谷与交通 · 暂定", "paragraphs": ["宽阔河谷、丘陵和古老城市构成地区主体。暂定方案在新旧都之间保留重要的陆路和河流联系。"]}]
+    },
+    {
+      "id": "desert", "group": "valthern", "name": "沙漠地区", "mapName": "沙漠地区", "position": "帝国西南部 · 示意", "artifact": "斗焰折光剑", "tags": "戈壁 · 绿洲商路",
+      "summary": "荒漠、戈壁与干旱高原之间分布着绿洲和商贸路线。",
+      "sections": [{"title": "干旱地貌 · 暂定", "paragraphs": ["西南山地可阻挡部分湿润气流，在背风侧形成干旱带。其中保留绿洲、地下水系和可供人员往来的商路。"]}]
+    },
+    {
+      "id": "new-capital-coast", "group": "valthern", "name": "新王都沿海地区", "mapName": "新王都沿海地区", "position": "帝国东南部 · 示意", "artifact": "龙潮袖弩", "tags": "王都 · 港口河口",
+      "summary": "革命复兴后建立的新王都坐落在南部大海湾的瓦尔瑟恩一侧。",
+      "sections": [{"title": "沿海地理", "paragraphs": ["地区以沿海平原、港口、河口和海湾为主。瓦尔瑟恩与阿斯特兰分别拥有大海湾两侧的海岸。"]}, {"title": "新旧都交通 · 暂定", "paragraphs": ["旧都、新王都之间可保留重要陆路；帝国主要河流也可经由两地抵达大海湾。"]}]
+    },
+    {
+      "id": "vesaryn", "group": "aestran", "name": "维萨伦", "mapName": "珊瑚地区 · 维萨伦", "subtitle": "珊瑚地区", "latin": "Vesaryn", "position": "帝国北部至东北部 · 示意", "house": "瑟维兰家族（House Sevrain）", "artifact": "幽鳞盾", "tags": "白珊瑚台地 · 亡者记忆",
+      "summary": "广阔的白珊瑚台地从大陆东北部延伸至曲折海岸，层叠的高地、悬崖与洞窟形成独特生态。",
+      "sections": [{"title": "地貌与聚落", "paragraphs": ["大陆内部遍布层叠台地、陡崖与洞窟，大片腹地难以通行，其间分布着许多原住民聚落。"]}, {"title": "行政与信仰", "paragraphs": ["维萨伦是阿斯特兰的名义领土，当地军队规模较小，实际行政控制集中在有限范围。更远的东北原始地带属未归属区域。", "当地保留与亡者记忆和亡者信仰有关的传统。"]}]
+    },
+    {
+      "id": "narethis", "group": "aestran", "name": "纳瑞斯", "mapName": "群岛地区 · 纳瑞斯", "subtitle": "群岛地区", "latin": "Narethis", "position": "帝国东部近海及外海 · 示意", "house": "卡尔维斯家族（House Calveris）", "artifact": "潮角槊", "tags": "近海岛链 · 航线贸易",
+      "summary": "群岛、湾口和暗礁在帝国东部海域形成曲折航道，航海、贸易和探索在此兴盛。",
+      "sections": [{"title": "群岛与航道", "paragraphs": ["岛链由大小不一的岛屿、海峡、浅滩和暗礁构成。群岛之外连接外洋；它与维萨伦在地理和生态上的联系仍可进一步设计。"]}, {"title": "贸易与探索", "paragraphs": ["当地航海与贸易发达，对外政策相对宽松。外洋探索与岛间航运是地区的重要活动。"]}]
+    },
+    {
+      "id": "aurestan", "group": "aestran", "name": "奥瑞斯坦", "mapName": "王都地区 · 奥瑞斯坦", "subtitle": "王都地区", "latin": "Aurestan", "position": "帝国中部偏东 · 示意", "house": "奥斯特维恩家族（House Austervien）", "artifact": "夜翼骨伞", "tags": "河谷都市圈 · 昼静夜盛",
+      "summary": "阿斯特兰的政治、商业与文化中心。河谷间的帝国王都昼静夜盛，入夜以后商路和街市才最为活跃。",
+      "sections": [{"title": "帝国王都", "paragraphs": ["奥斯特维恩家族同时是帝国皇室。河谷、平原和交通枢纽支撑高度城市化的王都都市圈。暂定主要河道由花境流经王都，再向平原延伸。"]}, {"title": "夜间生活", "paragraphs": ["夜翼骨伞体系的能力者在夜间稍强，并厌恶强烈日照。政治、商贸、饮食、娱乐与社交活动普遍偏向夜间。"]}, {"title": "建筑风格", "paragraphs": ["华丽的帝国风与哥特式结构结合，以精雕仿骨装饰为特色。翼骨状扶壁、伞骨状穹顶肋架和带骨节感的拱门均见于这一风格。"]}]
+    },
+    {
+      "id": "verdane", "group": "aestran", "name": "维尔丹", "mapName": "平原地区 · 维尔丹", "subtitle": "平原地区", "latin": "Verdane", "position": "帝国南部至东南部 · 示意", "house": "维尔萨恩家族（House Velsarn）", "artifact": "青藤双牙匕（一对匕首）", "tags": "冲积平原 · 庄园与村镇",
+      "summary": "河流冲积地构成辽阔农业平原，橄榄园、果园、庄园和村镇分布其间。",
+      "sections": [{"title": "农业与管理", "paragraphs": ["普通居民的生活主要围绕农业展开。帝国对土地、粮食、人口和运输实施较严格的管理。"]}, {"title": "青藤双牙匕", "paragraphs": ["这对神器中的一把由正式地区领袖持有，另一把在多代以前失窃。帝国最高层知道失窃一事，却不掌握它目前的下落。"]}]
+    },
+    {
+      "id": "elyssia", "group": "aestran", "name": "伊露希雅", "mapName": "花境地区 · 伊露希雅", "subtitle": "花境地区", "latin": "Elyssia", "position": "帝国西部至西南部 · 示意", "house": "艾洛希恩家族（House Elosien）", "artifact": "绮光牙短剑", "tags": "花海丘陵 · 湖泊山谷",
+      "summary": "起伏高地间分布着山谷、森林、湖泊和大片花海。",
+      "sections": [{"title": "河流源地 · 暂定", "paragraphs": ["花境丘陵与山地可以孕育帝国的部分河流。其中一条主要河流建议从这里经过王都，流向平原地区。"]}, {"title": "地方工艺 · 待深化", "paragraphs": ["艺术、纺织、染色、珠宝与精细工艺是可继续发展的地方方向。"]}]
+    },
+    {
+      "id": "far-north", "group": "unclaimed", "name": "极北荒原", "mapName": "极北荒原", "position": "五部联盟以北", "tags": "冰原 · 冻土",
+      "summary": "联盟北境之外的冰原和冻土，其间还有未知山地与危险生物。",
+      "sections": [{"title": "荒原探索", "paragraphs": ["极北荒原属于未归属区域。它毗邻冰雪森林地区；更深处的山地和生态有待设计。"]}]
+    },
+    {
+      "id": "western-wilds", "group": "unclaimed", "name": "西部荒野", "mapName": "西部荒野", "position": "瓦尔瑟恩西境以外", "tags": "干旱高原 · 零散绿洲",
+      "summary": "荒漠、戈壁和干旱高原在瓦尔瑟恩边境之外延展，间有零散绿洲。",
+      "sections": [{"title": "聚落 · 待深化", "paragraphs": ["荒野可能存在游牧群体、独立村落与尚未接触主要国家的聚落。具体聚落与位置待设计。"]}]
+    },
+    {
+      "id": "central-mountains", "group": "unclaimed", "name": "中央山地", "mapName": "中央山地", "position": "三国部分边境交会附近", "tags": "深山峡谷 · 无主缓冲区",
+      "summary": "三国边境附近的无主缓冲地带，高山、峡谷、深林和河谷构成复杂的生态。",
+      "sections": [{"title": "边境往来", "paragraphs": ["三国可能局部探索、采集或经过中央山地，现有设定中没有国家在该区域建立稳定控制。暂定地理方案为附近分水岭保留可通行的山口、丘陵与河谷。"]}]
+    },
+    {
+      "id": "northeastern-wilds", "group": "unclaimed", "name": "东北原始地带", "mapName": "东北原始地带", "position": "维萨伦外围东北部", "tags": "原始森林 · 未知生态",
+      "summary": "维萨伦外围更远的东北原始地带，分布着森林、特殊地貌与尚未探索的生态。",
+      "sections": [{"title": "领土关系", "paragraphs": ["此处属于真正未归属的荒野。相邻的维萨伦腹地虽实际控制薄弱，仍属阿斯特兰名义领土。"]}]
+    },
+    {
+      "id": "open-ocean", "group": "unclaimed", "name": "东部与南部远海", "position": "东部群岛以外与南方外洋", "tags": "开放海洋 · 未知岛链",
+      "summary": "大洲东部和南部的远海向外洋敞开，远洋有可能通往其他大陆与文明。",
+      "sections": [{"title": "远洋探索", "paragraphs": ["外洋可能分布着尚未发现的岛链。其他大陆的位置、远洋航线以及相关文明均待设计。"]}]
+    }
+  ]
+}

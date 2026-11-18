@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="查阅三国大洲的地区设定。">
+  <title>地区资料 · 三国大洲</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/compass.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./region.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="./"><img src="./assets/compass.svg" alt="" width="26" height="26">世界图鉴</a>
+      <nav aria-label="主导航"><a href="./#atlas">大洲地图</a><a href="./#directory">地区索引</a><a href="./#world-notes">大洲概况</a></nav>
+    </div>
+  </header>
+  <main class="shell detail" id="region-content">
+    <a class="back-link" href="./">← 返回大洲地图</a>
+    <div id="region" aria-live="polite"><p class="message">正在读取地区资料…</p></div>
+    <noscript><p class="message">请启用 JavaScript 以查看地区资料。</p></noscript>
+  </main>
+  <footer class="page-footer shell"><span>三国大洲 · 世界图鉴</span><span id="source">大洲地理设定与地图制作说明 V1.0</span></footer>
+</body>
+</html>
