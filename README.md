@@ -9,6 +9,7 @@
 ## 更新设定和图片
 
 - `docs/data/world.json` 保存地区说明、家族、神器与正文。用 `id` 定位已有条目，保留该字段可以沿用地区链接，例如 `region.html?id=vesaryn`。地区的 `sections` 按顺序展示，每节有 `title` 和 `paragraphs`。
+- 奥瑞斯坦的互动地图、城市详情、授印能力及用图在 `docs/data/aurestan.json`。`hotspot` 按顺序记录点击区域中心的横纵百分比及宽高百分比，坐标原点在整图左上角。更换构图后应重新对齐四个点击区域。保留城市和能力等级的 `id` 可以沿用已有链接。
 - 地区图片放在 `docs/assets/regions/<id>/`。在对应地区增加 `images`，其中每项使用相对站点根目录的图片路径，并附上替代文字。网站有图片时才显示图集。
 
 ```json

@@ -25,6 +25,33 @@ export function regionHref(id) {
   return `./region.html?id=${encodeURIComponent(id)}`;
 }
 
+export function entryHref(regionId, landmarkId) {
+  const query = new URLSearchParams({ region: regionId });
+  if (landmarkId) query.set('landmark', landmarkId);
+  else query.set('view', 'abilities');
+  return `./entry.html?${query}`;
+}
+
+export function artwork(data, { eager = false } = {}) {
+  const img = element('img');
+  img.src = assetUrl(data.src);
+  img.alt = data.alt;
+  if (data.width && data.height) {
+    img.width = data.width;
+    img.height = data.height;
+  }
+  img.loading = eager ? 'eager' : 'lazy';
+  return img;
+}
+
+export function appendSections(parent, sections) {
+  for (const section of sections) {
+    const block = element('section', 'lore-section');
+    block.append(element('h3', '', section.title), ...section.paragraphs.map(paragraph => element('p', '', paragraph)));
+    parent.append(block);
+  }
+}
+
 export function groupDot() {
   const dot = element('span', 'group-dot');
   dot.setAttribute('aria-hidden', 'true');
